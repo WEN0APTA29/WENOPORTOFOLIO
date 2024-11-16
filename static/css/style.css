@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 2%;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  /* line-height: 20px; */
+  /* letter-spacing: 0.2em; */
+  background: linear-gradient(180deg, #FBF8EF 0%, rgba(124, 196, 232, 0.8) 100%);
+  color: #567D89;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi pada elemen yang diinginkan */
+.home__title, .home__subtitle, .feedback__form {
+  animation: slideIn 1.5s ease-out forwards;
+  opacity: 0; /* Mulai dengan opacity 0 */
+}
+
+/* Untuk memberikan waktu agar animasi selesai pada elemen tertentu */
+.home__title {
+  animation-delay: 0.3s;
+}
+
+.home__subtitle {
+  animation-delay: 0.5s;
+}
+
+.feedback__form {
+  animation-delay: 0.7s;
+}
+
+
+h1,
+h2 {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+img {
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.header::before, .header-responsive::before {
+  content: "WENO APTA";
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: #d45a22; /* Ganti dengan warna yang diinginkan */
+  z-index: 1000; /* Pastikan terlihat di atas elemen lain */
+  font-style: oblique;
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.main-list {
+  display: flex;
+  gap: 150px;
+}
+
+.list-item__link {
+  position: relative;
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item__link::after {
+  position: absolute;
+  transition: 0.2s;
+  content: "";
+  border-radius: 10px;
+  width: 55%;
+  height: 3px;
+  bottom: -12px;
+  background: #F96E2A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.list-item__link:hover::after {
+  width: 100%;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/developer.png);
+  background-size: cover;
+  padding: 10vh 10vw 80vh 10vw;
+  background-position: center bottom;
+  gap: 20px;
+}
+
+.home__title {
+  letter-spacing: 0.3em;
+  font-size: 70px;
+  text-align: center;
+  color: #F96E2A
+  ;
+  line-height: 1;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1;
+  color:#F96E2A;
+  
+}
+
+.about {
+  margin-bottom: 200px;
+}
+
+.about__title {
+  font-size: 60px;
+  position: relative;
+  text-align: left;
+  color: #F96E2A;
+  line-height: 1;
+  text-shadow: 0px 4px 4px rgba(255, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 60px;
+}
+
+.about__title::after {
+  position: absolute;
+  content: "";
+  border-radius: 10px;
+  width: 60%;
+  height: 1px;
+  bottom: -13px;
+  background: #ad551a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer{
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+main{
+  min-height: 80vh;
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  color: #F96E2A;
+  animation-delay: 2ms;
+}
+
+
+
+
+.info-block__text {
+  width: 60%;
+  opacity: 0; /* Awalnya transparan */
+  transform: translateX(-50px); /* Geser ke kiri */
+  animation: fadeInMove 1.5s ease-out forwards; /* Animasi muncul */
+}
+
+/* Keyframes untuk animasi */
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.info-block__img {
+  align-self: center;
+}
+
+.skills{
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.certificate{
+  margin-bottom: 200px;
+}
+
+.certificate img{
+  width: 1000px;
+  margin-top: 30px;
+}
+
+.skills__title {
+  font-size: 60px;
+  position: relative;
+  text-align: left;
+  color: #F96E2A;
+  line-height: 1;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.skills__title::after {
+  position: absolute;
+  content: "";
+  border-radius: 10px;
+  width: 60%;
+  height: 1px;
+  bottom: -13px;
+  background: #ff7b00;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.skill__img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill__img:hover {
+  transform: scale(1.1); /* Memperbesar gambar sedikit */
+}
+
+.skill__info {
+  width: 150px;
+}
+
+.skill__button {
+  font: inherit;
+  font-weight: 700;
+  color: #F96E2A;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: slide-in 1.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.skill__button:hover {
+  color: #000000;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.project__img{
+  border-radius: 30px;
+}
+
+.project__link {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project__link::after {
+  position: absolute;
+  transition: 0.2s;
+  content: "";
+  border-radius: 10px;
+  width: 55%;
+  height: 3px;
+  bottom: -12px;
+  background: #a178b9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project__link:hover::after {
+  width: 100%;
+}
+
+.feedback {
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.feedback__title {
+  font-size: 60px;
+  position: relative;
+  text-align: left;
+  color: #F96E2A;
+  line-height: 1;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.feedback__title::after {
+  position: absolute;
+  content: "";
+  border-radius: 10px;
+  width: 60%;
+  height: 1px;
+  bottom: -13px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2em;
+}
+
+.form label {
+  width: 100%;
+}
+
+.form__input {
+  width: 100%;
+  font: inherit;
+  background: #392657;
+  border: 2px solid #a178b9;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+}
+
+.form__input::placeholder {
+  color: #fff;
+}
+
+.form__input:active,
+.form__input:focus,
+.form__input:focus-visible {
+  border: none;
+}
+
+
+.form__button {
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(111.97deg, #CC8BF2 35.63%, rgba(204, 139, 242, 0) 150.16%);
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.header-responsive{
+  display:none;
+}
+
+.responsive{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.responsive button img{
+  width: 30px;
+}
+
+.nav-list-res{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.res__link {
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.nav-list-res.active{
+  display: flex;
+}
+
+
+@media (max-width: 850px){
+  .home__title{
+    font-size: 40px;
+  }
+  .feedback__title{
+    font-size: 45px;
+  }
+  .home{
+    background-size: 1650px;
+    background-repeat: no-repeat;
+  }
+  .header{
+    display: none;
+  }
+
+  .header-responsive{
+    display: block;
+  }
+  .info-block__text{
+    font-size: medium;
+  }
+  .skills__title{
+    font-size: 35px;
+  }
+  .img_certificate {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+  }
+  
+}
+
+
+@media (max-width: 1392px){
+  .list-item__link{
+    font-size: 19px;
+  }
+  .main-list{
+    gap: 50px;
+  }
+  .feedback__form form{
+    font-size: 19px;
+  }
+  .about__title{
+   font-size: 35px;
+  }
+  
+}
+

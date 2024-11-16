@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Portofolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="index.html">HOME</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="/templates/about.html">ABOUT</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="/templates/skil.html">MY SKILLS</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="/templates/certificate.html">CERTIFICATE</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <header class="header-responsive">
+      <div class="responsive">
+        <nav class="header__nav main-nav">
+          <button type="button" id="btnBurger">
+            <img src="/static/img/hamburger menu.png" alt="">
+          </button>
+        </nav>
+      </div>
+      <div class="nav-list-res" id="navListRes">
+        <a class="res__link" href="index.html">HOME</a>
+        <a class="res__link" href="/templates/about.html">ABOUT</a>
+        <a class="res__link" href="/templates/skil.html">MY SKILLS</a>
+        <a class="res__link" href="/templates/certificate.html">CERTIFICATE</a>
+      </div>
+    </header>
+    <main class="main">
+      <!-- Bagian Pratinjau -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">WENO APTA</h1>
+        <p class="home__subtitle">GAME-DEVELOPER, PYTHON PROGRAMMER, AND ROBOTIC ENGINEER</p>
+      </section>
+
+      <!-- Formulir Masukan -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="masukkan E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="button" id="btn">SEND</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Weno Apta 2024</p>
+    </footer>
+<script src="/static/js/script.js"></script>
+<script src="/static/js/navbar.js"></script>
+    
+  </body>
+</html>
